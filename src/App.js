@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Navbar from "./components/Navbar";
+// import Gallery from './components/Gallery';
+import VideoBackground from './components/VideoBackground';
+import { ThemeProvider } from '@mui/material/styles';
+import { 
+  GlobalStyles, 
+  } from '@mui/material';
+import theme from './style/theme'
+import globalStyles from './style/globalStyles'
+
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <GlobalStyles styles={globalStyles} />
+        <div className="App">
+          <Navbar />
+          <VideoBackground />
+          {/* <Gallery /> */}
+        </div>
+    </ThemeProvider>
   );
 }
 
