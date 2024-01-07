@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from "./components/Navbar";
-// import Gallery from './components/Gallery';
+import Gallery from './components/Gallery';
 import VideoBackground from './components/VideoBackground';
 import { ThemeProvider } from '@mui/material/styles';
 import { 
@@ -18,7 +18,7 @@ function App() {
         <div className="App">
           <Navbar />
           <VideoBackground />
-          {/* <Gallery /> */}
+          <Gallery />
         </div>
     </ThemeProvider>
   );
